@@ -18,7 +18,9 @@ your_hand = (random.sample(card_list, 10))
 #     print(card["Title"])
 #     print(card["Description"])
 
-# making a table of the hand of cards and their descriptions
+# for card in your_hand:
 
+
+# making a table of the hand of cards and their descriptions
 data_frame = pd.DataFrame(your_hand)
-print(tabulate(data_frame, headers='keys', tablefmt='psql'))
+print(tabulate(data_frame, headers='keys', tablefmt='pretty', showindex="never"))
