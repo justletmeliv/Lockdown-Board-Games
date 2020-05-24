@@ -5,6 +5,25 @@ import random
 from random import randrange
 import pandas as pd
 from tabulate import tabulate
+import argparse
+
+# create an argument parser which allows us to read in arguments supplied on the command line - will let people set their own user interface size so the table displays nicely.
+parser = argparse.ArgumentParser(description = 'Play Fishbowl! A program that gives you a random hand of 10 cards displayed in a table.')
+# tells user what the program does.
+parser.add_argument(
+    # adds the switch '--width' as a recognised term for entering the screen width.
+    '--width',
+    # tells it to store the entered screen width figure in screen_width.
+    dest = 'screen_width',
+    # default value is 100.
+    default = '100',
+    # tells it to store the screen width value in the returned value of parse_args, 'args' (see next line).
+    action = 'store',
+    # help instructions if someone enters -h.
+    help='Please enter a number for the line width of the card description when displayed in the table. The default line width is set at 100, but if this is not readable on your screen please adjust to longer or shorter as needed by typing "--width" and the size number you want.')
+
+# using the filtering set up above, look at what has been entered (e.g. --width 50) and see if it meets the conditions above. If it does, store the value in 'args'.
+args = parser.parse_args()
 
 # read json file
 with open('Data.json', 'r') as myfile:
@@ -15,6 +34,7 @@ card_list = json.loads(data)
 
 # random choice of ten cards from the card list
 your_hand = (random.sample(card_list, 10))
+# code which iterates over the array your_hand - each dictionary from the array is stored in variable 'card'. Within the for loop, print title and description for each dictionary.
 # print (your_hand)
 # for card in your_hand:
 #     print(card["Title"])
@@ -57,8 +77,9 @@ def add_line_breaks(description_string, line_width):
 # add_line_breaks function contains the above for loop and other code and then puts the results of the code above back into card_description with the changes made.
 for card in your_hand:
     card["Description"] = add_line_breaks(
-        description_string=card["Description"],
-        line_width=100)
+        description_string = card["Description"],
+        # set the maximum line-width to either default of 100 (stored in screen_width) or the value supplied by the user in 'args' above.)
+        line_width = int(args.screen_width))
 
 # making a table of the hand of cards and their descriptions
 data_frame = pd.DataFrame(your_hand)
