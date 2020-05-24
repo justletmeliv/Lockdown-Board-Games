@@ -58,8 +58,8 @@ def add_line_breaks(description_string, line_width):
 for card in your_hand:
     card["Description"] = add_line_breaks(
         description_string=card["Description"],
-        line_width=50)
+        line_width=100)
 
 # making a table of the hand of cards and their descriptions
 data_frame = pd.DataFrame(your_hand)
-print(tabulate(data_frame, headers='keys', tablefmt='pretty', showindex="never"))
+print(tabulate(data_frame, headers='keys', tablefmt='fancy_grid', showindex="never"))
