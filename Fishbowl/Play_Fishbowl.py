@@ -5,6 +5,19 @@ import random
 from random import randrange
 import pandas as pd
 from tabulate import tabulate
+import argparse
+
+# create an argument parser which allows us to read in arguments supplied on the command line - will let people set their own user interface size so the table displays nicely.
+parser = argparse.ArgumentParser(description = 'Play Fishbowl! A program that gives you a random hand of 10 cards displayed in a table.')
+# tells user what the program does.
+parser.add_argument(
+    '--width',
+    dest = 'screen_width',
+    default = '100',
+    action = 'store',
+    help='Please enter a number for the line width of the card description when displayed in the table. The default line width is set at 100, but if this is not readable on your screen please adjust to longer or shorter as needed by typing "--width".')
+
+args = parser.parse_args()
 
 # read json file
 with open('Data.json', 'r') as myfile:
@@ -57,8 +70,8 @@ def add_line_breaks(description_string, line_width):
 # add_line_breaks function contains the above for loop and other code and then puts the results of the code above back into card_description with the changes made.
 for card in your_hand:
     card["Description"] = add_line_breaks(
-        description_string=card["Description"],
-        line_width=100)
+        description_string = card["Description"],
+        line_width = int(args.screen_width))
 
 # making a table of the hand of cards and their descriptions
 data_frame = pd.DataFrame(your_hand)
