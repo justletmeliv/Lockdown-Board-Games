@@ -1,0 +1,11 @@
+Instructions:
+
+1. Divide into two teams.
+2. Run the Play_Fishbowl.py program to generate your hand of cards.
+3. A person from one team has 60 seconds to get the other team to guess as many card names from their screen as possible.
+    (a) Skipping is allowed!
+    (b) The person on the 'describing' team who isn't talking needs to keep track of cards guessed correctly so points can be tallied at the end.
+    (c) Points from each round go the guessers.
+4. Round 1: You can use any words, sounds or gestures except the name of the card.
+4. Round 2: Use one word only - NOT the name on the card.
+5. Round 3: Charades only - sound effects are allowed!

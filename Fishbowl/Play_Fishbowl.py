@@ -33,7 +33,7 @@ with open('Data.json', 'r') as myfile:
 card_list = json.loads(data)
 
 # random choice of ten cards from the card list
-your_hand = (random.sample(card_list, 10))
+your_hand = (random.sample(card_list, 20))
 # code which iterates over the array your_hand - each dictionary from the array is stored in variable 'card'. Within the for loop, print title and description for each dictionary.
 # print (your_hand)
 # for card in your_hand:
