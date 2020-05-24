@@ -233,5 +233,20 @@
     "Title":"Monty Don",
     "Description":"Britain's favourite gardener, who also happens to love dogs.",
     "Points":"2"
+  },
+  {
+    "Title": "Tomatoe Plants on the Windowsil",
+    "Description": "A selection of enduring plants on Jamie and Livs kitchen windowwil, that despite all odds, are continuing to grow",
+    "Points": "3"
+  },
+  {
+    "Title": "Gobby",
+    "Description": "A small chaffinch, who enjoys shouting very loudly, and so was lovingly names to reflect this",
+    "Points": "4"
+  },
+  {
+    "Title": "The Person to Your Left",
+    "Description": "Exactly as the title suggests, you must describe the  person to your left",
+    "Points": 4
   }
 ]
