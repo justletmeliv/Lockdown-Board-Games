@@ -235,18 +235,48 @@
     "Points":"2"
   },
   {
-    "Title": "Tomatoe Plants on the Windowsil",
-    "Description": "A selection of enduring plants on Jamie and Livs kitchen windowwil, that despite all odds, are continuing to grow",
+    "Title": "Tomato Plants on the Windowsill",
+    "Description": "A selection of enduring plants on Jamie and Liv's kitchen windowsill that, despite all odds, are continuing to grow.",
     "Points": "3"
   },
   {
     "Title": "Gobby",
-    "Description": "A small chaffinch, who enjoys shouting very loudly, and so was lovingly names to reflect this",
+    "Description": "A small chaffinch who enjoys shouting very loudly in a garden in Kent and was lovingly names to reflect this.",
     "Points": "4"
   },
   {
     "Title": "The Person to Your Left",
-    "Description": "Exactly as the title suggests, you must describe the  person to your left",
-    "Points": 4
+    "Description": "Exactly as the title suggests, you must describe the person to your left.",
+    "Points": "4"
+  },
+  {
+    "Title": "Jamie's Shed",
+    "Description": "A solar-powered workshop/shed which is currently housing a random assortment of tools.",
+    "Points": "3"
+  },
+  {
+    "Title": "The Garden Pond",
+    "Description": "A lovely pond which is home to fish, tadpoles, frogs and very friendly newts! Jamie fell in and it was really funny.",
+    "Points": "3"
+  },
+  {
+    "Title": "Ice Skating",
+    "Description": "A crazy sport which involves balancing on a very thin piece of metal on a very slippery surface - who the hell came up with that idea in the first place?",
+    "Points": "3"
+  },
+  {
+    "Title": "Pandora, Domino and Dennis",
+    "Description": "Three very happy corn snakes!",
+    "Points": "3"
+  },
+  {
+    "Title": "The Land Rover",
+    "Description": "A red Land Rover that, according to Jamie, mysteriously ended up upside-down in someone's garden one day.",
+    "Points": "3"
+  },
+  {
+    "Title": "Rosie the Rhino",
+    "Description": "A very friendly rhino who lives in Port Lympne and likes being fed.",
+    "Points": "4"
   }
 ]
