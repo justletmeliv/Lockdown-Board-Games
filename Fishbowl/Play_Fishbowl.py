@@ -15,7 +15,7 @@ parser.add_argument(
     dest = 'screen_width',
     default = '100',
     action = 'store',
-    help='Please enter a number for the line width of the card description when displayed in the table. The default line width is set at 100, but if this is not readable on your screen please adjust to longer or shorter as needed by typing "--width".')
+    help='Please enter a number for the line width of the card description when displayed in the table. The default line width is set at 100, but if this is not readable on your screen please adjust to longer or shorter as needed by typing "--width" and the size number you want.')
 
 args = parser.parse_args()
 
