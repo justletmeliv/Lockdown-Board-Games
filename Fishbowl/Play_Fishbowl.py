@@ -30,32 +30,47 @@ def add_line_breaks(description_string, line_width):
     # set return_string as an empty string - needs to be an empty string so python knows that += is a concatenation function as both are data type string.
     return_string = ""
 
+    print(description_string)
+
 # creating the range length of string to be able to slice and add line break
     for character_index in string_index_range:
 # current_character - gives you the character at any given index number in the description string based on the json file
         current_character = description_string[character_index]
+        print(current_character)
 # return_string will concatenate the output of current_character - so will make the actual description sentence which we can then add line breaks to
         return_string += current_character
-# what happens if insert_next_character is true?
+# what happens if insert_on_next_character is true?
         if insert_on_next_character is True:
-            # insert a line break into the return_string, reset insert_next_character to false, reset character_counter to 0
+            # insert a line break into the return_string, reset insert_on_next_character to false, reset character_counter to 0
             # character = character[:character_index] + " " + character[character_index:] - leaving this in as a 'how to slice things'.
             return_string += "\n"
             insert_on_next_character = False
             character_counter = 0
+            print(return_string)
 
-# if the count is greater than or equal to 50 and character is a space, set insert_next_character to true for the next loop
-        if character_counter >= 50 and character == " ":
-            insert_next_character = True
-# outside the loop, return return_string
+# if the count is greater than or equal to 50 and character is a space, set insert_on_next_character to true for the next loop
+        if character_counter >= line_width and current_character == " ":
+            print("Space time!")
+            insert_on_next_character = True
+# need to increase the value of character_counter by 1 at the end of each loop to make sure it is keeping the right count
+        print(character_counter)
+        print(" ")
+        character_counter +=1
+# outside the loop, return (put value of return string into card["Description"]) return_string
+    print(return_string)
     return return_string
 
+test = add_line_breaks("hello liv", 4)
+
+
+
+
+exit()
 # add_line_breaks function contains the above for loop and other code and then puts the results of the code above back into card_description with the changes made.
 for card in your_hand:
-    card["description"] =
-        add_line_breaks(
-        description_string=card["description"],
-        line_width=50)
+    card["Description"] = add_line_breaks(
+        description_string=card["Description"],
+        line_width=20)
 
 # making a table of the hand of cards and their descriptions
 data_frame = pd.DataFrame(your_hand)
