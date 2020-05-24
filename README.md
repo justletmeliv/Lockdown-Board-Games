@@ -2,7 +2,8 @@
 
 ## Made by justletmeliv and jamieapps101
 
-A Fishbowl inspired card generation game that accepts cards in json format and prints the randomly chosen cards to the terminal. Text taken from Monikers game under creative commons licence.
+A Fishbowl inspired card generation game that accepts cards in json format and prints the randomly chosen cards to the terminal. Text taken from [Monikers game](https://s3.amazonaws.com/www.monikersgame.com/Press+kit/Monikers+PnP.pdf) under creative commons licence.
+
 
 ### License:
 
